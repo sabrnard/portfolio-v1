@@ -1,16 +1,66 @@
-// ANCIEN
 .works{
     header{ 
         height: 80vh;
-        // width: 100vh;
-        // margin: 55px 0;
         margin: 10px 0;
         overflow:hidden;
         position: relative;
         background: none;
         @media (min-width: 640px){
             margin: 55px 45px 0;
-            // width: auto;
+        }
+        .logo{
+            @media (min-width: 640px){
+                width: 30px;
+                height: auto;
+                z-index: 1;
+                position: fixed;
+                top: 10px;
+                left:45px;
+            }
+            
+        }
+        //CLOSING CROSS
+        .closing-cross {
+            width: 35px;
+            height: 35px;
+            position: fixed;
+            top:6px;
+            right:6px;
+            z-index:100;
+            font-size:1rem;
+            border: 2px solid $pink; 
+            cursor:pointer;
+            // background: rgba(182, 215, 205, 0.733);
+            // background: rgba(255, 206, 192, 0.733);
+            border-radius: 20px;
+            @media (min-width: 640px){
+                top:10px;
+                right:48px;
+            }
+            &__item {
+                height: 2px;
+                background:$pink;
+                position: absolute;
+                left:15%;
+                top:50%;
+                width: 70%;
+                transition:.3s transform ease-in-out;
+                &:nth-of-type(1) {
+                    top:50%;
+                    transform: rotate(45deg)
+                }
+                &:nth-of-type(2) {
+                    top:50%;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        .scroll{
+            z-index: 1;
+            top:70%;
+            @media (min-width: 990px){
+                top:75%;
+            }
         }
         .socials{
             display:none;
@@ -53,7 +103,7 @@
             display: flex;
             flex-direction: column;
             width: 80%;
-            padding-bottom: 20px;
+            padding: 20px 0;
             @media (min-width: 640px){
                 flex-direction: row;
                 padding: 40px 

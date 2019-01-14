@@ -2,7 +2,7 @@
 main{
 	margin: 0 45px 150px;
 	background-color: rgb(243, 236, 236);
-	background: lightblue url('../img/background-main.png') no-repeat center center;
+	background: $lightgrey url('../img/background-main.png') no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
 	@media (max-width: 640px){
@@ -93,7 +93,7 @@ main{
 					}
 					.transparent{
 						height: auto;
-						margin-top: 81px;
+						margin-top: 10%;
 						@media (max-width: 990px){
 							margin-top: 38px;
 						}
@@ -105,10 +105,16 @@ main{
 								margin: 20px 0;
 								padding: 0 30px;
 							}
+							a{
+								color:$darkgreen;
+								font-size: 1em;
+							}
 						}
 						.socials{
+							display:none;
 							@media (max-width: 640px){
-								margin:30px;
+								display:inline-block;
+								margin:0 30px 40px;
 							}
 							a{
 								@media (max-width: 640px){
@@ -178,14 +184,19 @@ main{
 				display: flex;
 				flex-flow:column wrap;
 				height: 64em;
+				@media (max-width: 640px){
+					display: initial;
+				}
 				.gallery__item{
 					display: flex;
 					min-height: 200px;
 					flex:0 0 auto;
-					background-color: aqua;
 					margin: 0px 8px 8px 0px;
 					overflow:hidden;
 					position: relative;
+					@media (max-width: 640px){
+						margin:0;
+					}
 					&::before{
 						content: "";
 						position: absolute;
@@ -195,7 +206,7 @@ main{
 						height: 100%;
 						width: 100%;
 						opacity: 1;
-						background: $green;
+						// background: $green;
 						transition: .3s bottom ease-in-out;
 					}
 					&:hover::before{
@@ -209,6 +220,9 @@ main{
 						left: 50%;
 						top: 50%;
 						transform: translate(-50%, -50%);
+						// @media (max-width: 640px){
+						// 	min-height: 100%;
+						// }
 						&.imgwidth{
 							min-width: 100%;
 						}
@@ -242,9 +256,14 @@ main{
 					}
 				}
 				.gallery__item:nth-child(1) {
-					background-color: $green;
+					background-color: $salmon;
 					min-height: 230px;
 					width:50%;
+					@media (max-width: 640px){
+						width:100%;
+						// min-height: 60vh;
+						min-height: 300px;
+					}
 					&::before{
 						background-color: $salmon;
 					}
@@ -256,6 +275,10 @@ main{
 				.gallery__item:nth-child(2) {
 					min-height: 480px;
 					background-color: darkblue;
+					@media (max-width: 640px){
+						width:100%;
+						min-height: 300px;
+					}
 					&::before{
 						background-color:darkblue;
 					}
@@ -264,22 +287,34 @@ main{
 				.gallery__item:nth-child(3) {
 					background-color: $darkgreen;
 					min-height: 225px;
+					@media (max-width: 640px){
+						min-height: 300px;
+					}
 					&::before{
 						background-color: $darkgreen;
 					}
 				  }
 				  
 				.gallery__item:nth-child(4) {
+					background-color: $blue;
 					min-height: 385px;
 					width: 50%;
+					@media (max-width: 640px){
+						width:100%;
+						min-height: 300px;
+					}
 					&::before{
 						background-color: $blue;
 					}
 				  }
 				  
 				.gallery__item:nth-child(5) {
-					background-color: $salmon;
+					background-color: $green;
 					min-height: 250px;
+					@media (max-width: 640px){
+						width:100%;
+						min-height: 300px;
+					}
 					&::before{
 						background-color: $green;
 					}
@@ -287,8 +322,11 @@ main{
 				  
 				.gallery__item:nth-child(6) {
 					min-height: 300px;
-					// background-color: rgb(238, 10, 86);
+					background-color: $pink;
 					width: 50%;
+					@media (max-width: 640px){
+						width:100%;
+					}
 					&::before{
 						background-color: $pink;
 					}
@@ -305,6 +343,7 @@ main{
 				width:35%;
 				@media (max-width: 640px){
 					width: 100%;
+					padding-top: 50px;
 				}
 				h2{
 					span{

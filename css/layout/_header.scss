@@ -17,7 +17,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        background: lightblue url('../img/background-header.png') no-repeat center center;
+        background: $lightgrey url('../img/background-header.png') no-repeat center center;
         background-size: cover;
         overflow: hidden;
         @media (max-width: 990px) {
@@ -51,11 +51,10 @@
                     position: absolute;
                     z-index: 1;
                     left: 0;
-                    bottom:0;
+                    bottom:4px;
                     height: 10px;
                     width: 0;
                     transition: .5s width ease-in-out;
-                    background: $green;
                 }
                 &:hover::before{
                     width: 100%;
@@ -68,6 +67,21 @@
                 span{
                     position: relative;
                     z-index: 2;
+                }
+                &.about{
+                    &::before{
+                        background: $salmon; 
+                    }
+                }
+                &.work{
+                    &::before{
+                        background: $green; 
+                    }
+                }
+                &.contact{
+                    &::before{
+                        background: $pink; 
+                    }
                 }
             }
         }
@@ -197,6 +211,19 @@
                     justify-content: center;
                     overflow: hidden;
                     transition: .5s ease-in-out;
+                    .main-nav__item{
+                        padding: 20px 0;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            z-index: 1;
+                            left: 0;
+                            bottom:31px;
+                            height: 10px;
+                            width: 0;
+                            transition: .5s width ease-in-out;
+                        }
+                    }
                     a {
                         color: $green;
                         display: block;
@@ -210,7 +237,6 @@
                         margin-right:0;
                     }
                      &.active{
-                        //  height: 100%;
                         left:0;
                         top:0;
                      } 
