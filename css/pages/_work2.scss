@@ -21,8 +21,8 @@
         }
         //CLOSING CROSS
         .closing-cross {
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             position: fixed;
             top:6px;
             right:6px;
@@ -188,9 +188,28 @@
                     margin:60px auto;
                 }
             }
+            &__wrap{
+                @media (min-width: 990px){
+                    display: flex;
+                    flex-wrap: wrap;
+                } 
+            }
 
             //BOX 
             &__box{
+                @media (min-width: 990px){
+                    width:50%;
+                    margin-bottom: 40px;
+                    &.one{
+                        order:1;
+                    }
+                    &.three{
+                        order:4;
+                    }
+                    &.five{
+                        order:5;
+                    }
+                }
                 height: 70vh;
                 // margin: 0px 8px 8px 0px;
                 overflow:hidden;
@@ -211,11 +230,25 @@
             &__txt{
                 width: 60%;
                 margin:25px auto;
+                &.six{
+                    display: none;
+                }
                 @media (min-width: 640px){
                     margin:40px auto;
                 }
                 @media (min-width: 990px){
-                    margin:60px auto;
+                    margin:198px 35px;
+                    width:44%;
+                        &.two{
+                            order:2;
+                        }
+                        &.four{
+                            order:3;
+                        }
+                        &.six{
+                            display: initial;
+                            order:6;
+                        }
                 }
             }
             
@@ -224,6 +257,10 @@
                 width:100%;
                 position: relative;
                 height: 120px;
+                @media (min-width: 990px){
+                    &.seven{
+                        order:7;
+                    }}
                 .my-work{
                     position: absolute;
                     left: 50%;
@@ -237,7 +274,7 @@
                     transition: .2s all ease-in-out;
                     display: inline-block;
                     margin: 40px auto;
-                    width: 220px;
+                    width: 240px;
                 &:hover{
                     @media (min-width: 990px){
                         background-color:$salmon;

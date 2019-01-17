@@ -7,9 +7,17 @@ $('.burger-menu').click(function () {
 $('a[href^="#"]').on('click', function (e) {
   e.preventDefault();
   let encre = this.hash;
-  $('html, body').animate({
-    scrollTop: $(encre).offset().top - $('.main-nav').outerHeight()
-  }, '800');
+  if (encre == "#work") {
+    $('html, body').animate({
+      scrollTop: $(encre).offset().top
+    }, '800');
+  } else {
+    $('html, body').animate({
+      scrollTop: $(encre).offset().top - $('.main-nav').outerHeight()
+    }, '800');
+  }
+
+
   $('.burger-menu').removeClass('active');
   $('.main-nav').removeClass('active');
 });
@@ -44,7 +52,7 @@ let scroll = $('.scroll');
 
 if ($(window).scrollTop() > 150) {
   scroll.addClass('side');
-  
+
 } else {
   scroll.removeClass('side');
 }
