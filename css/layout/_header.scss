@@ -154,6 +154,7 @@
             top: 80%;
             transition: .4s top ease-in-out;
             // vertical arrow
+            transition: .4s opacity ease-in-out;
             &::before {
                 content:'';
                 width: 20px;
@@ -172,11 +173,15 @@
                 animation-timing-function:linear;
             }
             &.side{
-                position: fixed;
                 top:90%;
                 left:6px;
 
-            }               
+            }
+            &.hidden{
+                //visibility: hidden;
+                opacity: 0;
+
+            }              
         }
     }
 }

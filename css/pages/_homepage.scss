@@ -5,6 +5,9 @@ main{
 	background: $lightgrey url('../img/background-main.png') no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
+	@media (max-width: 990px){
+		margin:0 40px 150px;
+	}
 	@media (max-width: 640px){
 		margin:0 0 150px;
 	}
@@ -29,6 +32,38 @@ main{
                 }
 			}
 
+			//Eye following mouse
+			.eye_wrapper{
+				width:67px;
+				height: 50%;
+				position: absolute;
+				left: 73%;
+    		right: 50%;
+    		top: 73%;
+				bottom:50%;
+			}
+			.eye_container{
+				width:122px;
+				height: 50%;
+				position: absolute;
+				left:50%;
+				left: 73%;
+				right: 50%;
+				top: 73%;
+				background: url('../img/eye-contour.svg') no-repeat;  
+				z-index: 1000;
+				overflow:hidden;
+			}
+			#eye_follower{
+				position: absolute;
+				top: 25px;
+				left: 45px;
+				width: 32px;
+				height: 32px;
+				background-color:$darkblue;
+				border-radius: 20px;
+				z-index: 1;
+			}
 			.about-container{
 				display: flex;
 				margin-bottom: 80px;
@@ -109,6 +144,18 @@ main{
 								color:$darkgreen;
 								font-size: 1em;
 							}
+              // &::before {
+              //   content:'';
+              //   width: 110px;
+              //   height: 180px;
+              //   background: url(../img/eye-contour.svg) no-repeat;
+              //   display: inline-block;
+              //   background-size: 120px;
+              //   position: absolute;
+              //   left: 80px;
+              //   top: 85px;
+              //   }
+            
 						}
 						.socials{
 							display:none;
@@ -207,29 +254,24 @@ main{
 						height: 100%;
 						width: 100%;
 						opacity: 1;
-						// background: $green;
 						transition: .3s bottom ease-in-out;
 					}
 					&:hover::before{
 						bottom:0;
 					}
 					&:hover .project{
-						top: 40%;
+						top: 40px;
 					}
 					img{
 						position: absolute;
 						left: 50%;
 						top: 50%;
 						transform: translate(-50%, -50%);
+						min-height: 100%;
+						min-width: 100%;
 						// @media (max-width: 640px){
 						// 	min-height: 100%;
 						// }
-						&.imgwidth{
-							min-width: 100%;
-						}
-						&.imgheight{
-							min-height: 100%;
-						}
 					}
 					a{
 						position: absolute;
@@ -241,7 +283,7 @@ main{
 						z-index: 2;
 						width: 100%;
 						position: absolute;
-						top: 74%;
+						// top: 74%;
 						transition: .3s all ease-in-out;
 						margin-left: 20px;
 						&__type{
@@ -271,6 +313,9 @@ main{
 					.project{
 						top: 70%;
 					}
+					&:hover .project{
+						top: 40px;
+					}
 				  }
 				  
 				.gallery__item:nth-child(2) {
@@ -283,6 +328,12 @@ main{
 					&::before{
 						background-color:darkblue;
 					}
+					.project{
+						top: 85%;
+					}
+					&:hover .project{
+						top: 40px;
+					}
 				  }
 				  
 				.gallery__item:nth-child(3) {
@@ -294,6 +345,13 @@ main{
 					&::before{
 						background-color: $darkgreen;
 					}
+					.project{
+						top: 68%;
+					}
+					&:hover .project{
+						top: 40px;
+					}
+
 				  }
 				  
 				.gallery__item:nth-child(4) {
@@ -307,6 +365,12 @@ main{
 					&::before{
 						background-color: $blue;
 					}
+					.project{
+						top: 82%;
+					}
+					&:hover .project{
+						top: 40px;
+					}
 				  }
 				  
 				.gallery__item:nth-child(5) {
@@ -319,6 +383,12 @@ main{
 					&::before{
 						background-color: $green;
 					}
+					.project{
+						top: 72%;
+					}
+					&:hover .project{
+						top: 40px;
+					}
 				  }
 				  
 				.gallery__item:nth-child(6) {
@@ -330,6 +400,12 @@ main{
 					}
 					&::before{
 						background-color: $pink;
+					}
+					.project{
+						top: 77%;
+					}
+					&:hover .project{
+						top: 40px;
 					}
 				  }
 			}

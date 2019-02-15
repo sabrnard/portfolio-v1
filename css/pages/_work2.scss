@@ -8,6 +8,10 @@
         @media (min-width: 640px){
             margin: 55px 45px 0;
         }
+        @media (min-width: 1200px){
+            margin: 55px auto 0;
+            width:1200px;
+        }
         .logo{
             @media (min-width: 640px){
                 width: 30px;
@@ -30,8 +34,6 @@
             font-size:1rem;
             border: 2px solid $pink; 
             cursor:pointer;
-            // background: rgba(182, 215, 205, 0.733);
-            // background: rgba(255, 206, 192, 0.733);
             border-radius: 20px;
             @media (min-width: 640px){
                 top:10px;
@@ -98,6 +100,9 @@
         @media (min-width: 640px){
             width:calc(100% - 90px);
         }
+        @media (min-width: 1200px){
+            width:1200px;
+        }
         // <!-- Description -->
         .description{
             display: flex;
@@ -133,8 +138,53 @@
                             font-size: 1.5em;
                         }
                     }
-                // &__left{
-                // }
+                    .link{
+                        width:100%;
+                        position: relative;
+                        height: 120px;
+                        @media (min-width: 990px){
+                            &.seven{
+                                order:7;
+                            }}
+                        .website{
+                            position: initial;
+                            text-align: center;
+                            padding: 10px 30px;
+                            background-color:$green;
+                            position: relative;
+                            color: #fff;
+                            font-size:1.2em;
+                            transition: .2s all ease-in-out;
+                            display: inline-block;
+                            margin: 10px auto;
+                            width: 240px;
+                        &:hover{
+                            @media (min-width: 990px){
+                                background-color:$salmon;
+                                color: #fff;
+                                padding-left: 60px;
+                                &::before{
+                                    transition: .2s all ease-in-out;
+                                    left: 20px; 
+                            }
+        
+                            }
+                        }
+                        // horizontal arrow
+                        &::before {
+                            content:'';
+                            width: 30px;
+                            height: 11px;
+                            background: url(../img/arrow.png) no-repeat;
+                            display: inline-block;
+                            background-size: 30px;
+                            position: absolute;
+                            left: -19px;
+                            top: 20px;
+                        }
+        
+                        }
+                    } 
             }
         }
         // Mozaique //
@@ -159,7 +209,7 @@
                 background: #000;
                 margin-bottom: 5px;
                 @media (min-width: 990px){
-                    height: 450px;
+                    height: 400px;
                 }
                 img{
                     position: absolute;
@@ -199,7 +249,7 @@
             &__box{
                 @media (min-width: 990px){
                     width:50%;
-                    margin-bottom: 40px;
+                    margin-bottom: 0px;
                     &.one{
                         order:1;
                     }
@@ -228,17 +278,23 @@
                 }
             }
             &__txt{
-                width: 60%;
-                margin:25px auto;
+                width: 70%;
+                padding:25px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
                 &.six{
                     display: none;
                 }
                 @media (min-width: 640px){
-                    margin:40px auto;
+                    padding:40px;
                 }
                 @media (min-width: 990px){
-                    margin:198px 35px;
-                    width:44%;
+                    width:50%;
+                    padding:0px 35px;
+                    margin:0;
                         &.two{
                             order:2;
                         }
@@ -246,7 +302,7 @@
                             order:3;
                         }
                         &.six{
-                            display: initial;
+                            display: flex;
                             order:6;
                         }
                 }
